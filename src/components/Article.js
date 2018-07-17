@@ -1,12 +1,13 @@
 import React from 'react'
 
-function Article() {
-    const body = <section>body</section>
+function Article(props) {
+    const {article} = props;
+    const body = <section>{article.text}</section>;
     return (
-        <div style={{color: 'blue'}}>
-            <h2>title</h2>
+        <div>
+            <h2>{article.title}</h2>
             {body}
-            <h3>Creation date {new Date().toDateString()}</h3>
+            <h3>Page created {new Date().toTimeString()}</h3>
         </div>
     )
 }

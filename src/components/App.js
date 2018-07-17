@@ -1,5 +1,6 @@
 import React from 'react'
 import Article from './Article'
+import articles from '../fixtures'
 
 function App() {
     return (
@@ -7,7 +8,7 @@ function App() {
             <div style={{color: 'red'}}>
                 <h1> App name</h1>
             </div>
-            <Article/>
+            <Article article={articles[0]}/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Article from './Article'
+import ArticleList from './ArticleList'
 import articles from '../fixtures'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
             <div style={{color: 'red'}}>
                 <h1> App name</h1>
             </div>
-            <Article article={articles[0]}/>
+            <ArticleList articles={articles}/>
         </div>
     )
 }

@@ -14,9 +14,8 @@ class Article extends Component {
                 <button onClick={this.handleClick}>
                     {this.state.isOpen ? 'Close' : 'Open'}
                 </button>
-
                 {body}
-                <h3>Page created {new Date().toTimeString()}</h3>
+                <h3>Report created {new Date().toTimeString()}</h3>
             </div>
         )
     }

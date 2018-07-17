@@ -5,6 +5,22 @@ class Article extends Component {
         isOpen: true
     };
 
+    //Creation
+    componentWillMount() {
+        console.debug('Hello')
+    }
+
+    componentDidMount() {
+        console.debug('Hello')
+    }
+
+    //Update
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.isOpen !== this.props.isOpen) {
+            alert("Changed")
+        }
+    }
+
     render() {
         const {article} = this.props;
         const body = this.state.isOpen && <section className='card-text'>{article.text}</section>;
@@ -29,7 +45,7 @@ class Article extends Component {
         this.setState({
             isOpen: !this.state.isOpen
         });
-    }
+    };
 }
 
 export default Article

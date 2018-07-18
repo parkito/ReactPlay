@@ -1,15 +1,14 @@
 import React, {Component} from 'react'
 
 class Article extends Component {
+
     state = {
         isCurrentArticleOpened: false
     };
 
-
     render() {
-        const {article, openedArticleId, changeOpenedArticleCallBack} = this.props;
+        const {article, openedArticleId} = this.props;
         this.state.isCurrentArticleOpened = openedArticleId === article.id;
-
         const body = this.state.isCurrentArticleOpened && <section className='card-text'>{article.text}</section>;
 
         return (
@@ -29,9 +28,7 @@ class Article extends Component {
         )
     }
 
-    handleClick = () => {
-        this.props.changeOpenedArticleCallBack(this.props.article.id);
-    };
+    handleClick = () => this.props.changeOpenedArticleCallBack(this.props.article.id);
 }
 
 export default Article

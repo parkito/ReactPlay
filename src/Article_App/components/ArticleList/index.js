@@ -14,7 +14,7 @@ class ArticleList extends Component {
             <li key={article.id} className='article-list_li'>
                 <Article article={article}
                          openedArticleId={this.state.openedArticleId}
-                         changeOpenedArticleCallBack={this.changeOpenedArticleId.bind(this, article.id)}/>
+                         changeOpenedArticleCallBack={this.changeOpenedArticleId}/>
             </li>
         );
 

@@ -1,26 +1,10 @@
 import React, {Component} from 'react'
 
 class Article extends Component {
-
     state = {
         isCurrentArticleOpened: false
     };
 
-    //Creation
-    componentWillMount() {
-        // console.debug('Hello')
-    }
-
-    componentDidMount() {
-        // console.debug('Hello')
-    }
-
-    //Update
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.isOpen !== this.props.isOpen) {
-            alert("Changed")
-        }
-    }
 
     render() {
         const {article, openedArticleId, changeOpenedArticleCallBack} = this.props;

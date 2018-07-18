@@ -3,6 +3,8 @@ import Article from "../Article/index";
 import './style.css'
 
 class ArticleList extends Component {
+    static NOT_EXISTED_ID = 0;
+
     state = {
         openedArticleId: null
     };
@@ -26,18 +28,13 @@ class ArticleList extends Component {
     }
 
     changeOpenedArticleId = (id) => {
-        if (id === this.state.openedArticleId) {
-            this.setState({
-                openedArticleId: 0
-            });
-        } else {
-            this.setState({
-                openedArticleId: id
-            });
-        }
+        var openedArticle = id === this.state.openedArticleId ? ArticleList.NOT_EXISTED_ID : id;
+
+        this.setState({
+            openedArticleId: openedArticle
+        });
 
     }
-
 
 }
 

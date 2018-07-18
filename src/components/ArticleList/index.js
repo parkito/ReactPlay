@@ -25,9 +25,19 @@ class ArticleList extends Component {
         );
     }
 
-    changeOpenedArticleId = openedArticleId => {
-        this.setState({openedArticleId});
-    };
+    changeOpenedArticleId = (id) => {
+        if (id === this.state.openedArticleId) {
+            this.setState({
+                openedArticleId: 0
+            });
+        } else {
+            this.setState({
+                openedArticleId: id
+            });
+        }
+
+    }
+
 
 }
 

@@ -15,13 +15,13 @@ class App extends Component {
                         Revert
                     </button>
                 </div>
-                <ArticleList articles={articles}/>
+                <ArticleList articles={this.articles}/>
             </div>
         )
     }
 
     revert = () => {
-        articles.reverse();
+        this.articles.reverse();
         this.setState({});
     }
 }

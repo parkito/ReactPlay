@@ -1,10 +1,15 @@
 import React from 'react';
-import App from "../../Article_App/components/App";
 
 class StorePicker extends React.Component {
 
     render() {
-        return <p>Hello</p>
+        return (
+            <form className='store-selector'>
+                <input type='text' required placeholder='Store Naem'/>
+                <button type='submit'> View store</button>
+            </form>
+
+        )
     }
 
 }

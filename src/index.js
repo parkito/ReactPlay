@@ -18,13 +18,11 @@ import NotFound from './React_Begginer/component/NotFound'
 const Root = () => {
     return (
         <Router>
-            <div>
                 <Switch>
                     <Route exact path='/' component={StorePicker}/>
                     <Route path="/store/:storeId" component={App}/>
                     <Route component={NotFound}/>
                 </Switch>
-            </div>
         </Router>
     )
 };

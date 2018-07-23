@@ -1,8 +1,7 @@
 import Rebase from 're-base'
 import firebase from 'firebase'
-import dotenv from 'dotenv'
 
-require('dotenv').config();
+require('dotenv').config(); //for .env files
 
 const config = {
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
@@ -11,12 +10,10 @@ const config = {
     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
-
 };
 
 const app = firebase.initializeApp(config);
 const base = Rebase.createClass(app.database());
-
 
 
 export default base;
